@@ -1,0 +1,441 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="Stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="Stylesheet" type="text/css" />
+    <link rel="Stylesheet" href="css/animate.css" />
+    <link rel="Stylesheet" href="css/bootstrap-dropdownhover.css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-dropdownhover.js"></script>
+    <style>
+    html
+    {
+        overflow:auto;
+    }
+    body
+    {
+        font-family:Berlin Sans FB;
+        
+    }
+    ::-webkit-scrollbar-thumb:window-inactive 
+    {
+        background:red;
+    }
+    ::-webkit-scrollbar-thumb 
+    {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background:#d17525;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+   ::-webkit-scrollbar 
+    {
+        width:12px;
+    }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+     </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+                        <a class="navbar-brand" href="Home.aspx"><h1>Go-To Shop</h1></a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li style="margin-top:10px;"><a href="Home.aspx"><h3>HOME</h3></a></li>
+                        
+                        <li style="margin-top:10px;"><a href="Location.aspx"><h3>SHOP NEAR YOU</h3></a></li>
+
+                        
+                            <li style="margin-top:30px;">
+                                <form class="navbar-form">
+                                    <div class="input-group input-group-lg" style=" max-width:850px; height:40px;">
+                                        <input class="form-control" type="text" placeholder="Search for Shops Products and more...">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-danger" type="submit">
+                                            Search</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </li>
+                    </div>
+      </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li style="margin-top:-50px; margin-bottom:20px;" class="h3"><a href="#" data-toggle="modal" data-target="#registerModal">SIGN UP</a></li>
+                <li style="margin-top:-50px; margin-right:20px;" class="h3"><a href="#" data-toggle="modal" data-target="#loginModal">LOG IN</a></li>
+            </ul>
+            
+            </br>
+            <ul style="margin-top:-20px; margin-left:160px;" class="nav navbar-nav">
+            <li style="margin-left:20px;"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <h3>CLOTHING<span class="caret"></span></h3>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">FOOTWEAR</a></li>
+                                <li><a href="#">TOP WEAR</a></li>
+                                <li class="dropdown">
+                                <a href="#">BOTTOM WEAR</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">JEANS</a></li>
+                                    <li><a href="#">TROUSER</a></li>
+                                    <li class="dropdown">
+                                        <a href="#">SHORTS</a>
+                                    </li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#">TRACK PANTS</a></li>
+                        <li><a href="#">PYJAMAS</a></li>
+                      </ul>     
+                       </li>
+                       <li style="margin-left:20px;"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <h3>MEN<span class="caret"></span></h3>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">FOOTWEAR</a></li>
+                                <li><a href="#">TOP WEAR</a></li>
+                                <li class="dropdown">
+                                <a href="#">BOTTOM WEAR</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">JEANS</a></li>
+                                        <li><a href="#">TROUSER</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">SHORTS</a>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">TRACK PANTS</a></li>
+                                <li><a href="#">PYJAMAS</a></li>
+                            </ul>
+                         </li>
+                         <li style="margin-left:20px;"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <h3>WOMEN<span class="caret"></span></h3>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">FOOTWEAR</a></li>
+                                <li><a href="#">TOP WEAR</a></li>
+                                <li class="dropdown">
+                                <a href="#">BOTTOM WEAR</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">JEANS</a></li>
+                                        <li><a href="#">TROUSER</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">SHORTS</a>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">TRACK PANTS</a></li>
+                                <li><a href="#">PYJAMAS</a></li>
+                            </ul>
+                         </li>
+                         <li  style="margin-left:20px;"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <h3>BABY & KIDS<span class="caret"></span></h3>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">FOOTWEAR</a></li>
+                                <li><a href="#">TOP WEAR</a></li>
+                                <li class="dropdown">
+                                <a href="#">BOTTOM WEAR</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">JEANS</a></li>
+                                        <li><a href="#">TROUSER</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">SHORTS</a>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">TRACK PANTS</a></li>
+                                <li><a href="#">PYJAMAS</a></li>
+                            </ul>
+                         </li>
+                         <li style="margin-left:20px;"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <h3>ELECTRONICS<span class="caret"></span></h3>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">FOOTWEAR</a></li>
+                                <li><a href="#">TOP WEAR</a></li>
+                                <li class="dropdown">
+                                <a href="#">BOTTOM WEAR</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">JEANS</a></li>
+                                        <li><a href="#">TROUSER</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">SHORTS</a>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">TRACK PANTS</a></li>
+                                <li><a href="#">PYJAMAS</a></li>
+                            </ul>
+                         </li>
+                         <li style="margin-left:20px;"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <h3>FURNITURE<span class="caret"></span></h3>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">FOOTWEAR</a></li>
+                                <li><a href="#">TOP WEAR</a></li>
+                                <li class="dropdown">
+                                <a href="#">BOTTOM WEAR</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">JEANS</a></li>
+                                        <li><a href="#">TROUSER</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">SHORTS</a>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">TRACK PANTS</a></li>
+                                <li><a href="#">PYJAMAS</a></li>
+                            </ul>
+                         </li>
+                         <li style="margin-left:20px;"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+                                <h3>APPLIANCES<span class="caret"></span></h3>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">FOOTWEAR</a></li>
+                                <li><a href="#">TOP WEAR</a></li>
+                                <li class="dropdown">
+                                <a href="#">BOTTOM WEAR</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">JEANS</a></li>
+                                        <li><a href="#">TROUSER</a></li>
+                                        <li class="dropdown">
+                                            <a href="#">SHORTS</a>
+                                        </li>
+                                        <li><a href="#"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">TRACK PANTS</a></li>
+                                <li><a href="#">PYJAMAS</a></li>
+                            </ul>
+                         </li>
+                         <li class="h2" style="margin-left:40px;"><a href="ContactUs.aspx">Contact Us</a></li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+    <div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title h1">Login Here</h4>
+        </div>
+        <div style="height:400px;" class="modal-body">
+         <div style="height:20px;"></div>
+            <!--<div style="margin-left:140px; margin-bottom:10px;" class="form-group col-lg-12">
+      <asp:Label AssociatedControlID="mobLgn" runat="server" class="col-sm-3 text-nowrap h2">Mobile No.</asp:Label>
+      <div class="col-sm-9">
+        <asp:TextBox runat="server" class="form-control input-lg" ID="mobLgn" 
+              style="max-width:300px;" ToolTip="Your Mobile Number"></asp:TextBox>
+              <asp:RequiredFieldValidator
+                  ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="Enter Mobile Number" ControlToValidate="mobLgn"></asp:RequiredFieldValidator>
+                  <asp:RegularExpressionValidator
+                      ID="RegularExpressionValidator1" runat="server" 
+              ErrorMessage="Enter a valid Number" ControlToValidate="mobLgn" 
+              ValidationExpression="^[789]\d{9}$"></asp:RegularExpressionValidator>
+      </div>
+    </div>
+    <div style="height:50px;"></div>
+    <div style="margin-left:140px;" class="form-group col-lg-12">
+      <asp:Label AssociatedControlID="passLgn" runat="server" class="col-sm-3 h2">Password</asp:Label>
+      <div class="col-sm-9">
+        <asp:TextBox runat="server" class="form-control input-lg"  ID="passLgn" 
+              style="max-width:300px;" TextMode="Password"></asp:TextBox>
+          <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="*Enter Password" ControlToValidate="passLgn"></asp:RequiredFieldValidator>
+      </div>-->
+      <div>
+        <asp:Login ID="Login1" runat="server" UserNameLabelText="Email" Width="500px" UserNameRequiredErrorMessage="Email is required." UserName="dfsd">
+        <TextBoxStyle CssClass="form-control input-lg" />
+        <LabelStyle CssClass="col-sm-3 h2" />
+        <LoginButtonStyle CssClass="btn btn-primary btn-lg col-lg-12" />
+        
+        </asp:Login>
+        </div>
+       <!--<input type="submit" class="btn btn-primary btn-lg col-lg-12" />-->
+<!--<asp:Button ID="Button2" runat="server" Text="Log In" CssClass="btn btn-primary btn-lg col-lg-12"></asp:Button>-->
+
+    <input type="button" id="close2_open1" class="btn  btn-lg col-lg-12" value="New to Shop? Click Here" />
+        
+    </div>
+	<div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    <script type="text/javascript">
+        $("#close2_open1").click(function () {
+            $("#loginModal").modal('hide');
+            $("#registerModal").modal('show');
+        });
+    </script>
+        </div>      
+    </div>
+  <!----------------------------------------------------------------------->
+  <div class="modal fade" id="registerModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title h1">Register Here</h4>
+        </div>
+        <div style="height:500px;" class="modal-body">
+         <div style="height:20px;"></div>
+            <div style="margin-left:140px; margin-bottom:10px;" class="form-group col-lg-12">
+      <asp:Label AssociatedControlID="emailTxt" ID="Label1" runat="server" class="col-sm-3 text-nowrap h2">Email</asp:Label>
+      <div class="col-sm-9">
+        <asp:TextBox runat="server" class="form-control input-lg" ID="emailTxt" 
+              style="width:300px;" ToolTip="Your Mobile Number"></asp:TextBox>
+              <asp:RequiredFieldValidator
+                  ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter Email" ControlToValidate="emailTxt"></asp:RequiredFieldValidator>
+                  <asp:RegularExpressionValidator
+                      ID="RegularExpressionValidator2" runat="server" 
+              ErrorMessage="*Enter a valid Email" ControlToValidate="emailTxt" 
+              ValidationExpression='^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$'></asp:RegularExpressionValidator>
+      </div>
+    </div>
+    <div style="height:50px;"></div>
+    <div style="margin-left:140px;" class="form-group col-lg-12">
+      <asp:Label AssociatedControlID="mobTxt" ID="Label2" runat="server" class="col-sm-3 h2">Mobile No.</asp:Label>
+      <div class="col-sm-9">
+        <asp:TextBox runat="server" class="form-control input-lg" ID="mobTxt" 
+              style="width:300px;" TextMode="SingleLine"></asp:TextBox>
+          <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Enter valid Mobile Number" ControlToValidate="mobTxt" ToolTip="Enter Mobile No." ValidationExpression="^[789]\d{9}$"></asp:RegularExpressionValidator><asp:RequiredFieldValidator
+              ID="RequiredFieldValidator4" runat="server" ErrorMessage="Enter Mobile Number" ControlToValidate="mobTxt"></asp:RequiredFieldValidator>
+      </div>
+       <div style="height:50px;"></div>
+    </div>
+    <div style="height:20px;"></div>
+            <div style="margin-left:140px; margin-bottom:10px;" class="form-group col-lg-12">
+      <asp:Label AssociatedControlID="passTxt" ID="Label3" runat="server" class="col-sm-3 text-nowrap h2">Password</asp:Label>
+      <div class="col-sm-9">
+        <asp:TextBox runat="server" class="form-control input-lg" ID="passTxt" 
+              style="width:300px;" ToolTip="Your Password" TextMode="Password"></asp:TextBox>
+              <asp:RequiredFieldValidator
+                  ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enter Password" ControlToValidate="passTxt"></asp:RequiredFieldValidator>
+                  
+      </div>
+    </div>
+    <div style="height:50px;"></div>
+    <div style="margin-left:140px;" class="form-group col-lg-12">
+      <asp:Label AssociatedControlID="cnfrmPassTxt" ID="Label4" runat="server" class="col-sm-3 h2">Confirm Password</asp:Label>
+      <div class="col-sm-9">
+        <asp:TextBox runat="server" class="form-control input-lg" id="cnfrmPassTxt" 
+              style="width:300px;" TextMode="Password"></asp:TextBox>
+              <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage=" Password didn't Match" ControlToValidate="cnfrmpassTxt" ControlToCompare="passTxt"></asp:CompareValidator>
+      </div>
+       <div style="height:50px;"></div>
+        <div style="height:50px;"></div>
+    </div>
+	
+    <!--<input type="submit" class="btn btn-primary btn-lg col-lg-12" />-->
+            <asp:Button ID="RegisterButton1" runat="server" Text="Register" CssClass="btn btn-primary btn-lg col-lg-12" />
+            <div style="height:50px;"></div>
+    <input type="button" class="btn  btn-lg col-lg-12" id="close1_open2" value="Already an User? Log In Here" />
+    <script type="text/javascript">
+        $("#close1_open2").click(function() {
+        $("#registerModal").modal('hide');
+        $("#loginModal").modal('show');
+        });
+    </script>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+      <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+          CancelSelectOnNullParameter="False"></asp:SqlDataSource>
+
+  </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+         
+        </asp:ContentPlaceHolder>
+        
+    </div>
+    
+    </form>
+    <!-- FOOTER-->
+    <div class="footer">
+    <div style=" width:100%; height:300px; background-color:#567ebf;">
+        <div class="container">
+                    <div class="gap">
+                    </div>
+                    <div class="row" style="font-size:large;">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="float:left; margin-left:0px;">
+                            <h3 style="color:Black; font-weight:bold;">About Us</h3>
+                            <ul class="nav" style="color:Black;">
+                                <li style="text-indent:-4px;"><a style="color:#2f3135;" href="ContactUs.aspx">Contact Us</a></li>
+                                <li style="text-indent:-4px;"><a style="color:#2f3135;" href="#">Advertise Online</a></li>
+                                <li style="text-indent:-4px;"><a style="color:#2f3135;" href="#">About Us</a></li>
+                                <li style="text-indent:-4px;"><a style="color:#2f3135;" href="#">Our Partners</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" style="float:left;">
+                            <h3 style="color:Black; font-weight:bold;" >More Services</h3>
+                            <ul class="nav" style=" color:Gray;">
+                                <li><a style="color:#2f3135;" href="#">How It Works ?</a></li>
+                                <li><a style="color:#2f3135;" href="#">Terms &amp; Condition</a></li>
+                                <li><a style="color:#2f3135;" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix visible-sm">
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" style="float:left;">
+                            <h3 style="color:Black; font-weight:bold;">User Area</h3>
+                            <ul class="nav" style=" color:#2f3135;">
+                                <li><a style="color:#2f3135;" href="#" data-toggle="modal" data-target="#registerModal">Create Account</a></li>
+                               
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12" style=" float:right; margin-top:0px;">
+                        
+                            <h3 style="color:Black; font-weight:bold;">Contact Us</h3>
+                            <ul class="nav" style=" color:Gray;">
+                            <li><h5 style=" color:#2f3135; margin-top:0px;">Hima Patel : 7487005779</h5></li>
+                            <li><h5 style=" color:#2f3135; margin-top:0px;">Krina Shah : 4656532233</h5></li>
+                            <li><h5 style=" color:#2f3135; margin-top:0px;">Zaid Patel : 7568668569</h5></li>
+                            <li><h5 style=" color:#2f3135; margin-top:0px;">Chirag Sharma : 8866230824</h5></li>
+                        </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style=" color:Black; border-top: 1px solid #292929; margin-top: 5px; padding-top: 5px; float:left;">
+                                2017
+                            © GoToShop.com | All Right Reserved.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+    </div>
+</body>
+</html>
